@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent>div {
+            background-color: orange;
+        }
+        span+p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            i am a child
+        </div>
+        <span>
+            <div class="grand-child">
+                i am a grandchild
+            </div>
+        </span>
+        <p>i am a p directly after a span</p>
+        <p>i am not directly after a span</p>
+    </div>
+    <div class="orphan">
+        i am an orphan
+    </div>
+</body>
+</html>

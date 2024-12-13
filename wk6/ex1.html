@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        .page {
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            height: 10vh;
+        }
+        .main {
+            display: flex;
+            height: 90vh;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            background-color: lightblue;
+            justify-content: space-between;
+            width: 30vw;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gold;
+            width: 70vw;
+        }
+        .sidebar-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgreen;
+            height: 10vh;
+            box-sizing: border-box;
+            border: 3px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">header</div>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-item">1</div>
+                <div class="sidebar-item">2</div>
+                <div class="sidebar-item">3</div>
+            </div>
+            <div class="content">content</div>
+        </div>
+    </div>
+</body>
+</html>

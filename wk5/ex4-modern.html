@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        .page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            height: 10vh;
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main {
+            height: 90vh;
+            display: flex;
+            flex-direction: row;
+        }
+        .sidebar {
+            width: 20%;
+            height: 100%;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            height: 100%;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sidebar-item {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sidebar-item:hover {
+            border: 3px dashed tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            header
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-item">1</div>
+                <div class="sidebar-item">2</div>
+                <div class="sidebar-item">3</div>
+            </div>
+            <div class="content">i am the content</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            const applyBtn = document.getElementById('apply-btn')
+            let isOdds = true
+
+            applyBtn.onclick = () => {
+                isOdds = !isOdds
+                const selector = isOdds ? 'li:nth-child(odd)' : 'li:nth-child(even)'
+                const complementSelector = isOdds ? 'li:nth-child(even)' : 'li:nth-child(odd)'
+
+                document.querySelectorAll(complementSelector).forEach(li => {
+                    li.style.backgroundColor = 'white'
+                })
+
+                document.querySelectorAll(selector).forEach(li => {
+                    li.style.backgroundColor = 'red'
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="list-container">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <input type="button" value="apply" id="apply-btn">
+    </div>
+</body>
+</html>

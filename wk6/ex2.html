@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 600px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            border-radius: 0.5em;
+            padding: 1em;
+            justify-content: space-evenly;
+        }
+
+        label {
+            font-weight: bold;
+            padding: 0.5em;
+            font-size: 1.5em;
+        }
+        
+        .button-bar {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 2em;
+        }
+
+        input[type=text] {
+            border: 0px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            height: 2em;
+            border-radius: 1em;
+        }
+
+        .button-bar input {
+            font-size: 1.5em;
+            border: 0px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            padding: 0.5em;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <div class="button-bar">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

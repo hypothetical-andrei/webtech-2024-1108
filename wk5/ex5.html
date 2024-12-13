@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* body{
+            margin: 0px;
+            line-height: 100vh;
+            text-align: center;
+        } */
+        .registration {
+            width: 400px;
+            box-shadow: 0 0 5px gray;
+            border-radius: 1em;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            padding: 0.5em;
+        }
+        input[type=text],input[type=password] {
+            width: 100%;
+            padding: 0.5em;
+            border-radius: 1em;
+            box-shadow: 0 0 5px gray;
+            border: 0px;
+        }
+        .button-bar {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            padding-top: 3em;
+            padding-bottom: 1em;
+        }
+
+        .button-bar input[type=button] {
+            width: 100%;
+            border-radius: 1em;
+            background-color: lightblue;
+            box-shadow: 0 0 5px gray;
+            border: 0px;
+            height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+        <div class="button-bar">
+            <input type="button" value="Register me!">
+        </div>
+    </div>
+</body>
+</html>

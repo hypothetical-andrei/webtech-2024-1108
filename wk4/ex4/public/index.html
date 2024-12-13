@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            const catList = document.getElementById('cat-list')
+            const addCat = document.getElementById('add-cat')
+            const catName = document.getElementById('cat-name')
+
+            async function loadCats () {
+                const response = await fetch('http://localhost:8080/cats')
+                const cats = await response.json()
+                catList.innerHTML = ''
+                cats.forEach(cat => {
+                    const catDiv = document.createElement('div')
+                    catDiv.innerHTML = cat.name
+                    catList.appendChild(catDiv)
+                })
+            }
+
+            loadCats()
+
+            addCat.onclick = async () => {
+                const response = await fetch('http://localhost:8080/cats', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name: catName.value })
+                })
+                if (response.ok) {
+                    loadCats()
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="cat-list"></div>
+    <div id="cat-form">
+        <input type="text" id="cat-name">
+        <input type="button" id="add-cat" value="Add Cat">
+    </div>
+</body>
+</html>

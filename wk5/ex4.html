@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        .page {
+            height: 100vh;
+            width: 100vw;
+        }
+        .header {
+            height: 10vh;
+            background-color: orange;
+            text-align: center;
+            line-height: 10vh;
+        }
+        .main {
+            height: 90vh;
+        }
+        .sidebar {
+            width: 20%;
+            height: 100%;
+            background-color: lightblue;
+            float: left;
+        }
+        .content {
+            height: 100%;
+            background-color: lightgreen;
+        }
+        .sidebar-item {
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .sidebar-item:hover {
+            border: 3px dashed tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            header
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-item">1</div>
+                <div class="sidebar-item">2</div>
+                <div class="sidebar-item">3</div>
+            </div>
+            <div class="content">i am the content</div>
+        </div>
+    </div>
+</body>
+</html>
